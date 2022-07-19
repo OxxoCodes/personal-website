@@ -19,7 +19,7 @@ function App() {
 
   return (
     <div className="AppWrapper" style={{'display': 'flex', 'flexDirection':'column', backgroundColor:"#282a36", color:"#F7F9F7", padding:"50px", overflowX:'hidden'}}>
-      <motion.div className="scroll-bar" style={{scaleX}}/>
+      <motion.div className="scroll-bar" style={{scaleX}} />
       <Hello />
       <WhoAmI />
       <WhereAmI />

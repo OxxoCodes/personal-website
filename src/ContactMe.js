@@ -8,17 +8,17 @@ import {motion} from 'framer-motion'
 const ContactMe = () => {
   return (
     <div className="ContactMe" style={{display:'flex', justifyContent:'center', marginTop:'30px'}}>
-      <motion.div whileHover={{scale:1.3}}>
+      <motion.div whileHover={{scale:1.3}} whileTap={{scale:0.8}}>
         <IconButton href="https://github.com/OxxoCodes" target="_blank" rel="noopener noreferrer" sx={{color:'white'}}>
           <GitHubIcon />
         </IconButton>
       </motion.div>
-      <motion.div whileHover={{scale:1.3}}>
+      <motion.div whileHover={{scale:1.3}} whileTap={{scale:0.8}}>
         <IconButton href="https://www.linkedin.com/in/nathanmbro/" target="_blank" rel="noopener noreferrer" sx={{color:'white'}}>
           <LinkedInIcon />
         </IconButton>
       </motion.div>
-      <motion.div whileHover={{scale:1.3}}>
+      <motion.div whileHover={{scale:1.3}} whileTap={{scale:0.8}}>
         <IconButton href="mailto:nathanmbrown@outlook.com" target="_blank" rel="noopener noreferrer" sx={{color:'white'}}>
           <EmailIcon />
         </IconButton>

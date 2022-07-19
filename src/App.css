@@ -18,6 +18,11 @@
   /*animation: avatars-anim 4s linear infinite;*/
 }
 
+.avatar {
+  position: absolute;
+  top: -350px;
+}
+
 .scroll-bar {
   position: fixed;
   top: 0;
@@ -25,7 +30,7 @@
   right: 0;
   height: 10px;
   width: 100%;
-  background-color: lightgreen;
+  background-color: #f45b69;
   z-index: 99999;
   transform-origin: 0;
 }
