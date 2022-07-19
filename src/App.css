@@ -1,0 +1,19 @@
+/*100% + 50 px = far right*/
+/*50% - 150px = center*/
+/*-350px = far left*/
+
+@keyframes avatars-anim {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-50%, 0);
+    }
+}
+
+.avatars {
+    /*position: absolute;*/
+    /*overflow: hidden;*/
+    /*white-space: nowrap;*/
+    /*animation: avatars-anim 4s linear infinite;*/
+}
