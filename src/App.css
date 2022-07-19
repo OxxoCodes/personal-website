@@ -3,17 +3,29 @@
 /*-350px = far left*/
 
 @keyframes avatars-anim {
-    0% {
-        transform: translate(0, 0);
-    }
-    100% {
-        transform: translate(-50%, 0);
-    }
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
 }
 
 .avatars {
-    /*position: absolute;*/
-    /*overflow: hidden;*/
-    /*white-space: nowrap;*/
-    /*animation: avatars-anim 4s linear infinite;*/
+  /*position: absolute;*/
+  /*overflow: hidden;*/
+  /*white-space: nowrap;*/
+  /*animation: avatars-anim 4s linear infinite;*/
+}
+
+.scroll-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  width: 100%;
+  background-color: lightgreen;
+  z-index: 99999;
+  transform-origin: 0;
 }
