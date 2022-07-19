@@ -1,32 +1,29 @@
 import React from "react";
 import Avatar from "@mui/material/Avatar";
 import {motion} from "framer-motion"
+import {Paper} from "@mui/material";
+
+const AnimatedAvatar = ({filename, size, yPos, xPos, delay}) => (
+    <motion.div className="avatar"
+                style={{x:xPos.toString()+"px", width:size, height:size}}
+                animate={{y:yPos, transition:{delay:delay}}} bounce={2} whileHover={{scale:1.05}}>
+      <Paper sx={{borderRadius:"50%"}} elevation={3}>
+        <Avatar src={`/images/${filename}`} sx={{width:size, height:size}} />
+      </Paper>
+    </motion.div>
+)
 
 const Hello = () => {
   return (
     <div className="Hello" style={{display:'flex', justifyContent:'center', flexDirection:'column'}}>
-      <div style={{width:"100%", height:"400px", display:'flex', justifyContent:'center'}} className="avatars">
-        <motion.div animate={{y:20+350+112.5}} bounce={2} transition={{delay:0.7 + 0.45}}>
-          <Avatar src="/images/Kid.png" sx={{width:75, height:75}} className="avatar"/>
-        </motion.div>
-        <motion.div animate={{y:20+350+75}} bounce={2} transition={{delay:0.7 + 0.3}}>
-          <Avatar src="/images/1337.png" sx={{width:150, height:150}} className="avatar"/>
-        </motion.div>
-        <motion.div animate={{y:20+350+37.5}} bounce={2} transition={{delay:0.7 + 0.15}}>
-          <Avatar src="/images/Chair.png" sx={{width:225, height:225}} className="avatar"/>
-        </motion.div>
-        <motion.div animate={{y:20+350}} bounce={2} transition={{delay:0.7}}>
-          <Avatar src="/images/Me.png" sx={{width:300, height:300}} className="avatar"/>
-        </motion.div>
-        <motion.div animate={{y:20+350+37.5}} bounce={2} transition={{delay:0.7 + 0.15}}>
-          <Avatar src="/images/Skiing.png" sx={{width:225, height:225}} className="avatar"/>
-        </motion.div>
-        <motion.div animate={{y:20+350+75}} bounce={2} transition={{delay:0.7 + 0.3}}>
-          <Avatar src="/images/TWB.png" sx={{width:150, height:150}} className="avatar"/>
-        </motion.div>
-        <motion.div animate={{y:20+350+112.5}} bounce={2} transition={{delay:0.7 + 0.45}}>
-          <Avatar src="/images/Doggo.png" sx={{width:75, height:75}} className="avatar"/>
-        </motion.div>
+      <div style={{width:"100%", height:"350px", display:'flex', justifyContent:'center'}} className="avatars">
+        <AnimatedAvatar filename="Kid.png" size={75} yPos={350+20+112.5}    xPos={-150-225-150-37.5} delay={0.7+0.45} />
+        <AnimatedAvatar filename="1337.png" size={150} yPos={350+20+75}     xPos={-150-225-75} delay={0.7+0.3} />
+        <AnimatedAvatar filename="Chair.png" size={225} yPos={350+20+37.5}  xPos={-150-112.5} delay={0.7+0.15} />
+        <AnimatedAvatar filename="Me.png" size={300} yPos={350+20}          xPos={0} delay={0.7} />
+        <AnimatedAvatar filename="Skiing.png" size={225} yPos={350+20+37.5} xPos={150+112.5} delay={0.7+0.15} />
+        <AnimatedAvatar filename="TWB.png" size={150} yPos={350+20+75}      xPos={150+225+75} delay={0.7+0.3} />
+        <AnimatedAvatar filename="Doggo.png" size={75} yPos={350+20+112.5}  xPos={150+225+150+37.5} delay={0.7+0.45} />
       </div>
 
       <div style={{display:'flex', flexDirection:'column', textAlign:'center'}}>
