@@ -1,5 +1,6 @@
 import React, {useEffect} from "react";
 import "./Typing.css"
+import {Paper} from "@mui/material";
 
 const Typing = (props) => {
   const [counter, setCounter] = React.useState(0);
@@ -14,7 +15,11 @@ const Typing = (props) => {
     };
   }, [props.text.length]);
 
-  return <h1 className="typing">{`> ${curText}`}</h1>;
+  return (
+    <Paper sx={{backgroundColor:"#1A1B23", padding:"10px 10px 10px 20px", display:"flex", alignContent:"center", width:"500px"}}>
+      <h1 style={{margin:0}} className="typing">{`> ${curText}`}</h1>;
+    </Paper>
+  )
 };
 
 export default Typing;
