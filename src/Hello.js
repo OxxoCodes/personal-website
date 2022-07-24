@@ -17,8 +17,8 @@ const Hello = () => {
   return (
     <div className="Hello" style={{display:'flex', justifyContent:'center', flexDirection:'column'}}>
       <div style={{maxWidth:"100%", height:'350px', display:'flex', justifyContent:'center'}} className="avatars">
-        <AnimatedAvatar filename="Kid.png" size={75} yPos={350+20+112.5}    xPos={-46.2} delay={0.7+0.45} />
-        <AnimatedAvatar filename="1337.png" size={150} yPos={350+20+75}     xPos={-35} delay={0.7+0.3} />
+        <AnimatedAvatar filename="1337.png" size={75} yPos={350+20+112.5}    xPos={-46.2} delay={0.7+0.45} />
+        <AnimatedAvatar filename="Cactus.png" size={150} yPos={350+20+75}     xPos={-35} delay={0.7+0.3} />
         <AnimatedAvatar filename="Chair.png" size={225} yPos={350+20+37.5}  xPos={-20} delay={0.7+0.15} />
         <AnimatedAvatar filename="Me.png" size={300} yPos={350+20}          xPos={0} delay={0.7} />
         <AnimatedAvatar filename="Skiing.png" size={225} yPos={350+20+37.5} xPos={20} delay={0.7+0.15} />
