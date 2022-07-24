@@ -16,9 +16,9 @@ const Card = ({header, body, image}) => {
                   animate={flipped ? 'flipped' : 'notFlipped'}
                   variants={variants}
                   onClick={() => setFlipped(!flipped)}>
-        <div style={{position:"absolute", bottom:0}}>
-          <h1>{header}</h1>
-          <p>{body}</p>
+        <div className="card-front-text">
+          <h1 className="card-header">{header}</h1>
+          <p className="card-body">{body}</p>
         </div>
       </motion.div>
     </CardWrapper>

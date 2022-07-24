@@ -11,3 +11,7 @@
     background-image: url("../public/images/Me.png");
     background-size: cover;
 }
+
+.card-body {
+    filter: blur(5px)
+}
