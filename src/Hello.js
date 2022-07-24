@@ -5,7 +5,7 @@ import {Paper} from "@mui/material";
 
 const AnimatedAvatar = ({filename, size, yPos, xPos, delay}) => (
     <motion.div className="avatar"
-                style={{position:'relative', x:xPos.toString()+"px", width:size, height:size}}
+                style={{position:'relative', x:xPos.toString()+"px", width:size, height:size, borderRadius:"50%"}}
                 animate={{y:yPos, transition:{delay:delay}}} bounce={2} whileHover={{scale:1.05}}>
       <Paper sx={{borderRadius:"50%", backgroundColor:"transparent"}} elevation={3}>
         <Avatar src={`/images/${filename}`} sx={{width:size, height:size}} />
