@@ -16,7 +16,8 @@ const Typing = (props) => {
   }, [props.text.length]);
 
   return (
-    <Paper sx={{backgroundColor:"#1A1B23", padding:"10px 10px 10px 20px", width:"500px"}}>
+    <Paper sx={{backgroundColor:"#1A1B23", padding:"10px 10px 10px 20px", width:"500px",
+                display:'flex', justifyContent:'center', alignItems:'center'}}>
       <h1 style={{margin:0}} className="typing">{`> ${curText}`}</h1>;
     </Paper>
   )
