@@ -14,8 +14,8 @@ const Card = ({header, body, image}) => {
     <CardWrapper filename={image}>
       <motion.div className="card" whileHover={{scale:1.01}}
                   animate={flipped ? 'flipped' : 'notFlipped'}
-                  variants={variants}
-                  onClick={() => setFlipped(!flipped)}>
+                  variants={variants}>
+                  {/*onClick={() => setFlipped(!flipped)}>*/}
         <div className="card-front-text">
           <h1 className="card-header">{header}</h1>
           <p className="card-body">{body}</p>
