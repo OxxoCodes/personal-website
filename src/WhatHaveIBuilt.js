@@ -5,7 +5,7 @@ const WhatHaveIBuilt = () => {
   return (
     <div className="WhoAmI" style={{display:'flex', flexDirection:'column',justifyContent:'flex-end'}}>
       <div style={{display:'flex', flexDirection:'column', textAlign:'center'}}>
-        <h1>💻 What Have I Made?</h1>
+        <h1>💻 What Have I Built?</h1>
       </div>
       <div style={{display: "flex", justifyContent:"center", flexDirection:"column"}}>
         <div style={{display:"flex", justifyContent:'space-around', flexWrap: 'wrap'}}>
