@@ -26,7 +26,7 @@ const Hello = () => {
         <AnimatedAvatar filename="Doggo.png" size={75} yPos={350+20+112.5}  xPos={46.2} delay={0.7+0.45} />
       </div>
 
-      <div style={{display:'flex', flexDirection:'column', textAlign:'center'}}>
+      <div style={{display:'flex', flexDirection:'column', justifyContent:'center', textAlign:'center'}}>
         <h1 style={{marginBottom:"5px"}}>Hi, I'm Nathan! 👋</h1>
         <h3 style={{marginTop:"5px"}}>I'm here to write code and chew bubble gum.</h3>
       </div>

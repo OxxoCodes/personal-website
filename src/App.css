@@ -2,20 +2,20 @@
 /*50% - 150px = center*/
 /*-350px = far left*/
 
-@keyframes avatars-anim {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(-50%, 0);
-  }
+
+.AppWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #282a36;
+  color: #F7F9F7;
+  padding: 50px;
+  overflow-x: hidden
 }
 
-.avatars {
-  /*position: absolute;*/
-  /*overflow: hidden;*/
-  /*white-space: nowrap;*/
-  /*animation: avatars-anim 4s linear infinite;*/
+.AppWrapper > div {
+  margin-bottom: 50px;
 }
 
 .avatar {
