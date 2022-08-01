@@ -2,6 +2,25 @@ import React from "react"
 import {motion} from "framer-motion"
 import CardWrapper from "./CardWrapper";
 
+const CardOverlay = ({clicked, setClicked}) => {
+  let variants = {
+    "0": {opacity: 0},
+    "1": {opacity: 0.6},
+    "2": {opacity: 0}
+  }
+
+  return (
+    <motion.div className={"card-overlay"}
+                style={{position:'fixed', top:0, left:0,
+                        width:'100vw', height:'100vh',
+                        zIndex:1, backgroundColor:'#000000', opacity:'0'}}
+                onClick={() => setClicked(2)}
+                animate={clicked.toString()}
+                variants={variants}
+                transition={{ease:'easeInOut'}}>
+    </motion.div>
+  )
+}
 
 const Card = ({header, previewBody, body, image, cid}) => {
   const [clicked, setClicked] = React.useState(0)
@@ -9,9 +28,9 @@ const Card = ({header, previewBody, body, image, cid}) => {
   // console.log(parentElem)
 
   let variants = {
-    0: {top:0, width:'300px', height:'500px', position:'relative', display:'block', backgroundImage: `url(/images/${image})`, backgroundSize:'cover'},
-    1: {position:'fixed', top:['50vh','10vh'], left: '5vw', width:'90vw', height:'80vh', zIndex: 2, backgroundImage: null},
-    2: {position:'fixed', top:'50vh', left: '5vw', width:'300px', height:'80vh', zIndex: 2, backgroundImage: null}
+    "0": {top:0, width:'300px', height:'500px', position:'relative', display:'block', backgroundImage: `url(/images/${image})`, backgroundSize:'cover'},
+    "1": {position:'fixed', top:['50vh','10vh'], left: '5vw', width:'90vw', height:'80vh', zIndex: 2, backgroundImage: null},
+    "2": {position:'fixed', top:'50vh', left: '5vw', width:'300px', height:'80vh', zIndex: 2, backgroundImage: null}
   }
 
   return (
@@ -24,10 +43,7 @@ const Card = ({header, previewBody, body, image, cid}) => {
                     transition={{ease:'easeInOut'}}
                     onClick={() => setClicked(1)}
                     onAnimationComplete={() => {
-                      console.log("Animation over")
-                      console.log(clicked)
                       if (clicked === 2) {
-                        console.log("Here")
                         setClicked(0)
                       }
                     }}
@@ -39,7 +55,7 @@ const Card = ({header, previewBody, body, image, cid}) => {
           </div>
         </motion.div>
       </div>
-      {clicked === 1 && <div style={{position:'fixed', zIndex:'1', top:'0', left:'0', width:'100vw', height:'100vh', backgroundColor:'#000000', opacity:'0.6'}} onClick={()=>setClicked(2)}/>}
+      {clicked > 0 && <CardOverlay clicked={clicked} setClicked={setClicked}/>}
     </CardWrapper>
   )
 }
