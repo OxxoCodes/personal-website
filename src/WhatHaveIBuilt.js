@@ -33,7 +33,7 @@ const WhatHaveIBuilt = () => {
         image: "Ally.jpg"
       },
       {
-        header: "Arcade Cabinet",
+        header: "Pi-Cade",
         previewBody: "A completely homemade from-scratch full-size arcade cabinet, built using a Raspberry Pi 4",
         image: "Arcade.jpg"
       },
