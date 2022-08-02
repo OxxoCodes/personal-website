@@ -48,11 +48,16 @@ const Card = ({header, previewBody, body, image, cid}) => {
                       }
                     }}
         >
-          <div className="card-front-text">
-            <h1 className="card-header">{header}</h1>
-            {clicked === 0 && <p>{previewBody}</p>}
-            {clicked === 1 && <p>{body}</p>}
-          </div>
+          {clicked === 0 &&
+            <div className="card-front-text">
+              <h1 className="card-header">{header}</h1>
+              <p>{previewBody}</p>
+            </div>}
+          {clicked === 1 &&
+            <div className="card-back">
+              {body}
+            </div>
+          }
         </motion.div>
       </div>
       {clicked > 0 && <CardOverlay clicked={clicked} setClicked={setClicked}/>}

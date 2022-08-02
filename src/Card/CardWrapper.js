@@ -23,6 +23,9 @@ const CardWrapper = styled.div`
     padding-top: 1px;
     padding-left: 10px;
     padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
   
   .card-header {
@@ -31,6 +34,13 @@ const CardWrapper = styled.div`
   }
   .card-body {
     margin: 10px 0 0 0;
+  }
+  
+  .card-back {
+    width: 100%;
+    height: 100%;
+    padding-left: 20px;
+    padding-bottom: 20px;
   }
 
 `
