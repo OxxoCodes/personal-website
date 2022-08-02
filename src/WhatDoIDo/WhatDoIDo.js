@@ -1,5 +1,5 @@
 import React from "react";
-import Typing from "./Typing"
+import Typing from "../Utils/Typing"
 
 const WhatDoIDo = () => {
   return (
