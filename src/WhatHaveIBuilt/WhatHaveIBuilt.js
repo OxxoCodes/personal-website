@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "../Card/Card"
 import Hydrogen from "./Hydrogen/Hydrogen";
+import DriveMan from "./DriveMan/DriveMan";
 
 const WhatHaveIBuilt = () => {
   const data = [
@@ -14,6 +15,7 @@ const WhatHaveIBuilt = () => {
       {
         header: "DriveMan",
         previewBody: "An application for managing files stored on Google Drive",
+        body: <DriveMan filename={"Driveman.jpg"} />,
         image: "DriveMan.jpg"
       },
       {
