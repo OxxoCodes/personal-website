@@ -18,11 +18,10 @@ const Hydrogen = ({filename}) => {
         <p>Hydrogen also supports backtesting returns against any specified range of time, assuming that the tickers
         provided contain data within that time period, and data during that range is available on Yahoo Finance.</p>
         <p>Although functional, Hydrogen has a lot of testing and validation that is currently underway. As such, Hydrogen
-          is not yet a publicly available project. When it is, you will find it on my <Link url={"https://github.com/OxxoCodes"} text={"GitHub"} />.</p>
+          is not yet a publicly available project.</p>
+        <p>When it is, you will find it on my <Link url={"https://github.com/OxxoCodes"} text={"GitHub"} />.</p>
       </div>
-      <div className="image">
-
-      </div>
+      <div className="image" />;
       </HydrogenWrapper>
   )
 }
