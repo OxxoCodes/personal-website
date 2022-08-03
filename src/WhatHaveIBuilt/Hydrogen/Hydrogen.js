@@ -21,7 +21,7 @@ const Hydrogen = ({filename}) => {
           is not yet a publicly available project.</p>
         <p>When it is, you will find it on my <Link url={"https://github.com/OxxoCodes"} text={"GitHub"} />.</p>
       </div>
-      <div className="image" />;
+      <div className="image" />
       </HydrogenWrapper>
   )
 }
