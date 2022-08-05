@@ -16,6 +16,7 @@ const ThisWebsite = ({filename}) => {
            This site is very much still under construction as I alter and refine the overall design, implement new features
            and animations, and create new content!</p>
         <p>This site is built using JavaScript, React, Framer Motion, and Material UI.</p>
+        <p>You can access the source code to this site <Link url={"https://github.com/OxxoCodes/personal-website"} text={"here"}/>.</p>
       </div>
       <div className="image" />
     </ThisWebsiteWrapper>
