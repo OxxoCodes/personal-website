@@ -9,7 +9,7 @@ export const VrfeWrapper = styled.div`
     width: 60%;
     height: 100%;
     margin-right: 20px;
-    overflow: scroll;
+    overflow: hidden;
   }
   
   .image {
