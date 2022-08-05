@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion, useScroll, useSpring } from "framer-motion";
 
+import Avatars from "../Avatars/Avatars"
 import Hello from "../Hello/Hello";
 import WhereAmI from "../WhereAmI/WhereAmI";
 import WhatDoIDo from "../WhatDoIDo/WhatDoIDo";
@@ -19,6 +20,7 @@ function App() {
   return (
     <div className="AppWrapper">
       <motion.div className="scroll-bar" style={{scaleX}} />
+      <Avatars />
       <Hello />
       <WhereAmI />
       <WhatDoIDo />
