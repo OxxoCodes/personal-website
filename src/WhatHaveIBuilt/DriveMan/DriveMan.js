@@ -6,7 +6,7 @@ const DriveMan = ({filename}) => {
   return (
     <DriveManWrapper filename={filename}>
       <div className="text">
-        <h1>Hydrogen</h1>
+        <h1>DriveMan</h1>
         <p>DriveMan is cloud file management software.</p>
         <p>With support for Google Drive, DriveMan allows users comfortable with the command-line
            to manage their files, both locally and in the cloud. It supports uploading, downloading, moving, copying, and
