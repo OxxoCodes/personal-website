@@ -21,7 +21,7 @@ const WhatHaveIBuilt = () => {
       {
         header: "DriveMan",
         previewBody: "An application for managing files stored on Google Drive",
-        body: <DriveMan filename={"Driveman.jpg"} />,
+        body: <DriveMan filename={"DriveMan.jpg"} />,
         image: "DriveMan.jpg"
       },
       {
