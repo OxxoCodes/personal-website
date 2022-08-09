@@ -1,66 +1,59 @@
-import React from "react"
+import React, {useEffect} from "react"
 import {motion} from "framer-motion"
 import CardWrapper from "./CardWrapper";
 
-const CardOverlay = ({clicked, setClicked}) => {
-  let variants = {
-    "0": {opacity: 0},
-    "1": {opacity: 0.6},
-    "2": {opacity: 0}
-  }
-
-  return (
-    <motion.div className={"card-overlay"}
-                style={{position:'fixed', top:0, left:0,
-                        width:'100vw', height:'100vh',
-                        zIndex:1, backgroundColor:'#000000', opacity:'0'}}
-                onClick={() => setClicked(2)}
-                animate={clicked.toString()}
-                variants={variants}
-                transition={{ease:'easeInOut'}}>
-    </motion.div>
-  )
-}
-
 const Card = ({header, previewBody, body, image, cid}) => {
-  const [clicked, setClicked] = React.useState(0)
-  // const parentElem = document.querySelector(`card-bounds ${cid}`).getBoundingClientRect()
-  // console.log(parentElem)
+  const [opened, setOpened] = React.useState(0)
+  const [variants, setVariants] = React.useState({"1": {}, "2": {}})
 
-  let variants = {
-    "0": {top:0, width:'300px', height:'500px', position:'relative', display:'block', backgroundImage: `url(/images/${image})`, backgroundSize:'cover'},
-    "1": {position:'fixed', top:['50vh','10vh'], left: '5vw', width:'90vw', height:'80vh', zIndex: 2, backgroundImage: null},
-    "2": {position:'fixed', top:'50vh', left: '5vw', width:'300px', height:'80vh', zIndex: 2, backgroundImage: null}
+  const overlayVariants = {
+    "0": {opacity:0},
+    "1": {opacity:0.6},
+    "2": {opacity:0}
   }
+
+  useEffect(() => {
+    // const parentElemRect = document.getElementsByClassName(`card-bounds ${cid}`)[0].getBoundingClientRect()
+    // const parentElemXY = {x: parentElemRect.left.toString()+"px", y: parentElemRect.top.toString()+"px"}
+    setVariants({
+      // "0": {position:'absolute', top:parentElemXY.y, left:parentElemXY.x, width:'300px', height:'500px', opacity:1, zIndex: -1},
+      // "1": {position:'absolute', top:'10vh', left: '5vw', width:'90vw', height:'80vh', opacity:1, zIndex: 2},
+      "0": {position:'fixed', top:'10vh', left: '100vw', width:'90vw', height:'80vh', zIndex: 2},
+      "1": {position:'fixed', top:'10vh', left: '5vw', width:'90vw', height:'80vh', zIndex: 2},
+    })
+  }, [setVariants])
+
 
   return (
     <CardWrapper filename={image}>
       <div className={`card-bounds ${cid}`}>
-        <motion.div className="card" whileHover={{scale: 1.01}}
-                    animate={clicked.toString()}
-                    initial={false}
-                    variants={variants}
-                    transition={{ease:'easeInOut'}}
-                    onClick={() => setClicked(1)}
-                    onAnimationComplete={() => {
-                      if (clicked === 2) {
-                        setClicked(0)
+        <motion.div className="card-front"
+                    whileHover={{scale: 1.01}}
+                    onClick={() => {
+                      if (!opened) {
+                        setOpened(1)
                       }
-                    }}
-        >
-          {clicked === 0 &&
-            <div className="card-front-text">
-              <h1 className="card-header">{header}</h1>
-              <p>{previewBody}</p>
-            </div>}
-          {clicked === 1 &&
-            <div className="card-back">
-              {body}
-            </div>
-          }
+                    }}>
+          <div className="card-front-text">
+            <h1 className="card-header">{header}</h1>
+            <p>{previewBody}</p>
+          </div>
         </motion.div>
+        <motion.div className="card-back"
+                    initial={false}
+                    animate={opened.toString()}
+                    variants={variants}
+                    transition={{ease:'easeInOut'}}>
+          {opened > 0 && body}
+        </motion.div>
+        <motion.div className="card-back-overlay"
+          style={{position: 'fixed', top: opened>0 ? 0 : '100vh', left: opened>0 ? 0 : '100vw'}}
+          initial={false}
+          animate={opened.toString()}
+          variants={overlayVariants}
+          transition={{ease:'easeInOut'}}
+          onClick={() => setOpened(0)} />
       </div>
-      {clicked > 0 && <CardOverlay clicked={clicked} setClicked={setClicked}/>}
     </CardWrapper>
   )
 }

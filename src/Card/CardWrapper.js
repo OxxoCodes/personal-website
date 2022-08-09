@@ -37,10 +37,28 @@ const CardWrapper = styled.div`
   }
   
   .card-back {
-    width: 100%;
-    height: 100%;
+    z-index: 1;
     padding-left: 20px;
     padding-bottom: 20px;
+    background-color: #232323;
+    border-radius: 20px;
+  }
+  .card-front {
+    position: relative;
+    top: 0;
+    width: 300px;
+    height: 500px;
+    border-radius: 20px;
+    background-image: ${props => `url(/images/${props.filename})`};
+    background-size: cover;
+  }
+  
+  .card-back-overlay {
+    z-index: 1;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000;
   }
 
 `
