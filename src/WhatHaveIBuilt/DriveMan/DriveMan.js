@@ -1,10 +1,10 @@
 import React from "react"
-import {DriveManWrapper} from "./DriveManWrapper";
+import BackCardWrapper from "../../Card/BackCardWrapper";
 import Link from "../../Utils/Link"
 
 const DriveMan = ({filename}) => {
   return (
-    <DriveManWrapper filename={filename}>
+    <BackCardWrapper filename={filename}>
       <div className="text">
         <h1>DriveMan</h1>
         <p>DriveMan is cloud file management software.</p>
@@ -18,7 +18,7 @@ const DriveMan = ({filename}) => {
         <p>You can access DriveMan <Link url={"https://github.com/OxxoCodes/DriveMan"} text={"here"} />.</p>
       </div>
       <div className="image" />
-    </DriveManWrapper>
+    </BackCardWrapper>
   )
 }
 

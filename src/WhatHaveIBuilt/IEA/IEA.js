@@ -1,10 +1,10 @@
 import React from "react"
-import {IEAWrapper} from "./IEAWrapper";
+import BackCardWrapper from "../../Card/BackCardWrapper";
 import Link from "../../Utils/Link"
 
 const IEA = ({filename}) => {
   return (
-    <IEAWrapper filename={filename}>
+    <BackCardWrapper filename={filename}>
       <div className="text">
         <h1>Internal Enterprise Application</h1>
         <p>In the Summer of 2022, from May 5th to August 5th, I have been working as a software developer intern at <Link url={"https://www.ally.com/"} text={"Ally Financial"}/>.</p>
@@ -28,7 +28,7 @@ const IEA = ({filename}) => {
            very little tension.</p>
       </div>
       <div className="image" />
-    </IEAWrapper>
+    </BackCardWrapper>
   )
 }
 

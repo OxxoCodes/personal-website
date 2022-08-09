@@ -1,10 +1,10 @@
 import React from "react"
-import {KanoWrapper} from "./KanoWrapper";
+import BackCardWrapper from "../../Card/BackCardWrapper";
 import Link from "../../Utils/Link"
 
 const Kano = ({filename}) => {
   return (
-    <KanoWrapper filename={filename}>
+    <BackCardWrapper filename={filename}>
       <div className="text">
         <h1>Kano</h1>
         <p>Kano is an interpreter for the CHIP-8 interpreted programming language, and was my first introduction to the
@@ -21,7 +21,7 @@ const Kano = ({filename}) => {
         <p>You can access Kano's source code <Link url={"https://github.com/OxxoCodes/Kano"} text={"here"}/>.</p>
       </div>
       <div className="image" />
-    </KanoWrapper>
+    </BackCardWrapper>
   )
 }
 

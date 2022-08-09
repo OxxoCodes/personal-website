@@ -1,10 +1,10 @@
 import React from "react"
-import {VrfeWrapper} from "./VrfeWrapper";
+import BackCardWrapper from "../../Card/BackCardWrapper";
 import Link from "../../Utils/Link"
 
 const Vrfe = ({filename}) => {
   return (
-    <VrfeWrapper filename={filename}>
+    <BackCardWrapper filename={filename}>
       <div className="text">
         <h1>VRFE</h1>
         <p>VRFE, short for Virtual Reality Field Experiences, is a team I worked under from Roughly April 2021 to June
@@ -14,7 +14,7 @@ const Vrfe = ({filename}) => {
         <p>You can find a brief video of the VRFE Grand Canyon application running on an Oculus Quest <Link url={"https://www.youtube.com/watch?v=kPWnLB0RVC0"} text={"here"} />.</p>
       </div>
       <div className="image" />
-    </VrfeWrapper>
+    </BackCardWrapper>
   )
 }
 

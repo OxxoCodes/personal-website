@@ -1,10 +1,10 @@
 import React from "react"
-import {PiCadeWrapper} from "./PiCadeWrapper";
+import BackCardWrapper from "../../Card/BackCardWrapper";
 import Link from "../../Utils/Link"
 
 const PiCade = ({filename}) => {
   return (
-    <PiCadeWrapper filename={filename}>
+    <BackCardWrapper filename={filename}>
       <div className="text">
         <h1>Pi-Cade</h1>
         <p>Short for "Raspberry Pi Arcade", Pi-Cade is a homemade, completely from-scratch full-size and tabletop arcade
@@ -21,7 +21,7 @@ const PiCade = ({filename}) => {
            compilation of arcade-related artwork.</p>
       </div>
       <div className="image" />
-    </PiCadeWrapper>
+    </BackCardWrapper>
   )
 }
 

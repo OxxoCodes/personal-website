@@ -1,10 +1,10 @@
 import React from "react"
-import {MarketBotWrapper} from "./MarketBotWrapper";
+import BackCardWrapper from "../../Card/BackCardWrapper";
 import Link from "../../Utils/Link"
 
 const MarketBot = ({filename}) => {
   return (
-    <MarketBotWrapper filename={filename}>
+    <BackCardWrapper filename={filename}>
       <div className="text">
         <h1>MarketBot</h1>
         <p>MarketBot is a marketplace application built around the Discord platform.</p>
@@ -18,7 +18,7 @@ const MarketBot = ({filename}) => {
         <p>You can access the source code to MarketBot <Link url={"https://github.com/OxxoCodes/MarketBot"} text={"here"} />.</p>
       </div>
       <div className="image" />
-    </MarketBotWrapper>
+    </BackCardWrapper>
   )
 }
 

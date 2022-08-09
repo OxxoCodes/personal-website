@@ -1,10 +1,10 @@
 import React from "react"
-import {ThisWebsiteWrapper} from "./ThisWebsiteWrapper";
+import BackCardWrapper from "../../Card/BackCardWrapper";
 import Link from "../../Utils/Link"
 
 const ThisWebsite = ({filename}) => {
   return (
-    <ThisWebsiteWrapper filename={filename}>
+    <BackCardWrapper filename={filename}>
       <div className="text">
         <h1>This Website</h1>
         <p>Take a look around!</p>
@@ -19,7 +19,7 @@ const ThisWebsite = ({filename}) => {
         <p>You can access the source code to this site <Link url={"https://github.com/OxxoCodes/personal-website"} text={"here"}/>.</p>
       </div>
       <div className="image" />
-    </ThisWebsiteWrapper>
+    </BackCardWrapper>
   )
 }
 

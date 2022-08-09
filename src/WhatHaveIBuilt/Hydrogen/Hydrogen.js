@@ -1,10 +1,10 @@
 import React from "react"
-import {HydrogenWrapper} from "./HydrogenWrapper";
+import BackCardWrapper from "../../Card/BackCardWrapper";
 import Link from "../../Utils/Link"
 
 const Hydrogen = ({filename}) => {
   return (
-    <HydrogenWrapper filename={filename}>
+    <BackCardWrapper filename={filename}>
       <div className="text">
         <h1>Hydrogen</h1>
         <p>Hydrogen is portfolio optimization software.</p>
@@ -22,7 +22,7 @@ const Hydrogen = ({filename}) => {
         <p>When it is, you will find it on my <Link url={"https://github.com/OxxoCodes"} text={"GitHub"} />.</p>
       </div>
       <div className="image" />
-      </HydrogenWrapper>
+      </BackCardWrapper>
   )
 }
 
