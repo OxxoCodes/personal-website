@@ -23,4 +23,4 @@ const Typing = (props) => {
   )
 };
 
-export default Typing;
+export default React.memo(Typing);

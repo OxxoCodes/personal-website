@@ -26,4 +26,4 @@ const Hydrogen = ({filename}) => {
   )
 }
 
-export default Hydrogen
+export default React.memo(Hydrogen)

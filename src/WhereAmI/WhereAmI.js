@@ -11,4 +11,4 @@ const WhereAmI = () => {
   )
 }
 
-export default WhereAmI;
+export default React.memo(WhereAmI);

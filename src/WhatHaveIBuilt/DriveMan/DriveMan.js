@@ -22,4 +22,4 @@ const DriveMan = ({filename}) => {
   )
 }
 
-export default DriveMan
+export default React.memo(DriveMan)

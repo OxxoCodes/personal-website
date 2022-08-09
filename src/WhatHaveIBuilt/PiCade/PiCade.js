@@ -25,4 +25,4 @@ const PiCade = ({filename}) => {
   )
 }
 
-export default PiCade
+export default React.memo(PiCade)

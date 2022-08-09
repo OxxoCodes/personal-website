@@ -32,4 +32,4 @@ const IEA = ({filename}) => {
   )
 }
 
-export default IEA
+export default React.memo(IEA)

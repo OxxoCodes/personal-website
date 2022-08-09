@@ -18,4 +18,4 @@ const Vrfe = ({filename}) => {
   )
 }
 
-export default Vrfe
+export default React.memo(Vrfe)

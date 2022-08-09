@@ -23,4 +23,4 @@ const ThisWebsite = ({filename}) => {
   )
 }
 
-export default ThisWebsite
+export default React.memo(ThisWebsite)

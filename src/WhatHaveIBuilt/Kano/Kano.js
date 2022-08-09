@@ -25,4 +25,4 @@ const Kano = ({filename}) => {
   )
 }
 
-export default Kano
+export default React.memo(Kano)

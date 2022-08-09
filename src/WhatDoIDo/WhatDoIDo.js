@@ -12,4 +12,4 @@ const WhatDoIDo = () => {
   )
 }
 
-export default WhatDoIDo;
+export default React.memo(WhatDoIDo);

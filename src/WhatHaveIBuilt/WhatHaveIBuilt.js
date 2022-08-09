@@ -77,4 +77,4 @@ const WhatHaveIBuilt = () => {
   )
 }
 
-export default WhatHaveIBuilt;
+export default React.memo(WhatHaveIBuilt);

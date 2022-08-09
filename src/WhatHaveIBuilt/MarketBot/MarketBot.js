@@ -22,4 +22,4 @@ const MarketBot = ({filename}) => {
   )
 }
 
-export default MarketBot
+export default React.memo(MarketBot)
