@@ -39,7 +39,6 @@ const CardWrapper = styled.div`
   .card-back {
     z-index: 1;
     padding-left: 20px;
-    padding-bottom: 20px;
     background-color: #232323;
     border-radius: 20px;
   }
