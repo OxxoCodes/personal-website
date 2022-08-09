@@ -46,7 +46,9 @@ const Card = ({header, previewBody, body, image, cid}) => {
                     variants={overlayVariants}
                     transition={{ease:'easeInOut'}}
                     onClick={() => setOpened(0)}
-        />
+                    whileHover={{opacity:0.3}}
+        >
+        </motion.div>
       </div>
     </CardWrapper>
   )
