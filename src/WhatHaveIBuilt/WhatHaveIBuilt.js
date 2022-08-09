@@ -66,7 +66,7 @@ const WhatHaveIBuilt = () => {
       <div style={{display:'flex', flexDirection:'column', textAlign:'center'}}>
         <h1>💻 What Have I Built?</h1>
       </div>
-      <div style={{display: "flex", justifyContent:"space-around", flexWrap:"wrap"}}>
+      <div style={{display: "flex", justifyContent:"center", flexWrap:"wrap"}}>
         {
           data.map((c, index) =>
             <Card header={c.header} previewBody={c.previewBody} body={c.body} image={c.image} cid={index} />
