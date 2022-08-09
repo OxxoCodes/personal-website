@@ -9,7 +9,7 @@ const BackCardWrapper = styled.div`
     width: 60%;
     height: 100%;
     margin-right: 20px;
-    overflow: hidden;
+    overflow: scroll;
   }
 
   .image {
