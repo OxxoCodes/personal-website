@@ -17,6 +17,7 @@ const BackCardWrapper = styled.div`
     height: 100%;
     background-image: url(${props => "/images/"+props.filename});
     background-size: cover;
+    border-radius: 0 20px 20px 0;
   }
 `
 
