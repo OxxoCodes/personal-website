@@ -13,7 +13,7 @@ const Vrfe = ({filename}) => {
         <p>In addition to issues with performance, there was also the challenge of even getting code to build for the target devices. This application had already begun development prior to my arrival, and the libraries that were being used targeted an older version of Unity, and had since been deprecated. As such, we had a project that couldn’t even be built for modern phones or standalone VR devices such as the Quest. This resulted in even more significant refactoring and reimplementation, replacing many of the application’s dependencies with modern equivalents. This allowed us to target both modern and legacy virtual reality devices on Android, iOS, macOS, and Windows.</p>
         <p>You can find a brief video of the VRFE Grand Canyon application running on an Oculus Quest <Link url={"https://www.youtube.com/watch?v=kPWnLB0RVC0"} text={"here"} />.</p>
       </div>
-      <div className="image" />
+      {window.innerWidth > window.innerHeight && <div className="image"/>}
     </BackCardWrapper>
   )
 }

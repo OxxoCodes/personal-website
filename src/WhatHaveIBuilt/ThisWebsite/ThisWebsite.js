@@ -18,7 +18,7 @@ const ThisWebsite = ({filename}) => {
         <p>This site is built using JavaScript, React, Framer Motion, and Material UI.</p>
         <p>You can access the source code to this site <Link url={"https://github.com/OxxoCodes/personal-website"} text={"here"}/>.</p>
       </div>
-      <div className="image" />
+      {window.innerWidth > window.innerHeight && <div className="image"/>}
     </BackCardWrapper>
   )
 }

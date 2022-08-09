@@ -35,16 +35,18 @@ const Card = ({header, previewBody, body, image, cid}) => {
                     initial={false}
                     animate={opened.toString()}
                     variants={variants}
-                    transition={{ease:'easeInOut'}}>
+                    transition={{ease:'easeInOut'}}
+                    whileHover={{scale:1.01}}>
           {opened > 0 && body}
         </motion.div>
         <motion.div className="card-back-overlay"
-          style={{position: 'fixed', top: opened>0 ? 0 : '100vh', left: opened>0 ? 0 : '100vw'}}
-          initial={false}
-          animate={opened.toString()}
-          variants={overlayVariants}
-          transition={{ease:'easeInOut'}}
-          onClick={() => setOpened(0)} />
+                    style={{position: 'fixed', top: opened>0 ? 0 : '100vh', left: opened>0 ? 0 : '100vw'}}
+                    initial={false}
+                    animate={opened.toString()}
+                    variants={overlayVariants}
+                    transition={{ease:'easeInOut'}}
+                    onClick={() => setOpened(0)}
+        />
       </div>
     </CardWrapper>
   )

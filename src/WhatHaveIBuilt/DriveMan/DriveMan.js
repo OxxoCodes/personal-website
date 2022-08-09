@@ -17,7 +17,7 @@ const DriveMan = ({filename}) => {
            file storage providers.</p>
         <p>You can access DriveMan <Link url={"https://github.com/OxxoCodes/DriveMan"} text={"here"} />.</p>
       </div>
-      <div className="image" />
+      {window.innerWidth > window.innerHeight && <div className="image"/>}
     </BackCardWrapper>
   )
 }

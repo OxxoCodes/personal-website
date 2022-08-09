@@ -17,7 +17,7 @@ const MarketBot = ({filename}) => {
            self-host with very little tension thanks to the program's simplicity and few dependencies.</p>
         <p>You can access the source code to MarketBot <Link url={"https://github.com/OxxoCodes/MarketBot"} text={"here"} />.</p>
       </div>
-      <div className="image" />
+      {window.innerWidth > window.innerHeight && <div className="image"/>}
     </BackCardWrapper>
   )
 }

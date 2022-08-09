@@ -27,7 +27,7 @@ const IEA = ({filename}) => {
            and created efficient and modular components that could be brought into other internal applications with
            very little tension.</p>
       </div>
-      <div className="image" />
+      {window.innerWidth > window.innerHeight && <div className="image"/>}
     </BackCardWrapper>
   )
 }

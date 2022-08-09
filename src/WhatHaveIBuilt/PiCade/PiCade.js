@@ -20,7 +20,7 @@ const PiCade = ({filename}) => {
         <p>The frame was 3D modeled prior to being cut out of MFD wood. All vinyl was custom-printed using a custom
            compilation of arcade-related artwork.</p>
       </div>
-      <div className="image" />
+      {window.innerWidth > window.innerHeight && <div className="image"/>}
     </BackCardWrapper>
   )
 }

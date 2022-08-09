@@ -20,7 +20,7 @@ const Kano = ({filename}) => {
            collection of software written for CHIP-8 <Link url={"https://github.com/kripod/chip8-roms"} text={"here"}/>.</p>
         <p>You can access Kano's source code <Link url={"https://github.com/OxxoCodes/Kano"} text={"here"}/>.</p>
       </div>
-      <div className="image" />
+      {window.innerWidth > window.innerHeight && <div className="image"/>}
     </BackCardWrapper>
   )
 }
