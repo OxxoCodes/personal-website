@@ -15,7 +15,7 @@ const PiCade = ({filename}) => {
            slot, powerful stereo speakers, customizable RGB LEDs, USB, and storage space for external peripherals - all
            wrapped up in a completely custom design.</p>
         <p>The top half of the cabinet is also completely detachable from the bottom half. This means that, depending on
-           your desired use case, you can go from having a full-size arcade cabinet to a tableetop without losing any of
+           your desired use case, you can go from having a full-size arcade cabinet to a tabletop without losing any of
            the important features! Minus the coin slot, of course.</p>
         <p>The frame was 3D modeled prior to being cut out of MFD wood. All vinyl was custom-printed using a custom
            compilation of arcade-related artwork.</p>
