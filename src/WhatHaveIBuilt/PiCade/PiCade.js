@@ -17,7 +17,7 @@ const PiCade = ({filename}) => {
         <p>The top half of the cabinet is also completely detachable from the bottom half. This means that, depending on
            your desired use case, you can go from having a full-size arcade cabinet to a tabletop without losing any of
            the important features! Minus the coin slot, of course.</p>
-        <p>The frame was 3D modeled prior to being cut out of MFD wood. All vinyl was custom-printed using a custom
+        <p>The frame was 3D modeled prior to being cut out of MDF wood. All vinyl was custom-printed using a custom
            compilation of arcade-related artwork.</p>
       </div>
       {window.innerWidth > window.innerHeight && <div className="image"/>}

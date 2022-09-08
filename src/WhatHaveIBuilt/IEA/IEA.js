@@ -14,7 +14,7 @@ const IEA = ({filename}) => {
            features, and ensuring high modularity through the use of Storybook stories and components.</p>
         <p>This application was an internal web dashboard used by others within my department and had the
            capability to pull large amounts of data from external endpoints on-demand and reflect that data to the user.</p>
-        <p>As this application involved many rapid and fairly complex component state changes, a huge focus was on solid
+        <p>As this application involved many rapid and complex component state changes, a huge focus was on solid
            code practices and a deep understanding of React to ensure maximum performance. In addition, as the components
            I developed were intended to be used elsewhere within the company following the conclusion of my internship, a
            large focus needed to be placed on modularity. Lastly, since this application was being actively used by those
